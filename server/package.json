@@ -4,17 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx ts-node .\/src\/app.ts"
+    "start": "npx ts-node ./src/app.ts",
+    "down": "npx knex migrate:down --knexfile ./knexFile.ts",
+    "migrate": "npx knex migrate:latest --knexfile ./knexFile.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "4.17.0",
+    "knex": "^0.21.1",
+    "sqlite3": "^4.2.0"
   },
   "devDependencies": {
+    "@types/express": "4.17.0",
     "ts-node": "^8.10.2",
-    "@types/express": "github:types/express",
     "typescript": "^3.9.3"
   }
 }
