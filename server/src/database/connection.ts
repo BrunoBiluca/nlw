@@ -1,10 +1,10 @@
 import Knex from 'knex'
 import path from 'path'
 
-var connection = Knex({
+var knex = Knex({
     client: "sqlite3",
     connection: {
-        filename: path.resolve(__dirname, "database", "database.sqlite")
+        filename: path.resolve(__dirname, "database.sqlite")
     },
     migrations: {
         tableName: 'migrations'
@@ -12,4 +12,4 @@ var connection = Knex({
     useNullAsDefault: true
 })
 
-export default connection
+export default knex
